@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Contacts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-2xl font-bold mb-6">Quản lý Contacts</h1>
+
+    <!-- FORM THÊM / SỬA -->
+    <div class="bg-white p-6 rounded shadow mb-6">
+        <h2 class="text-lg font-semibold mb-4" id="formTitle">Thêm Contact</h2>
+        <input type="hidden" id="contactId" />
+        <div class="flex flex-col gap-3">
+            <input id="inputEmail" type="email" placeholder="Email" class="border px-4 py-2 rounded" />
+            <div class="flex gap-3">
+                <button onclick="saveContact()" class="bg-blue-500 text-white px-6 py-2 rounded">Lưu</button>
+                <button onclick="resetForm()" class="bg-gray-400 text-white px-6 py-2 rounded">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BẢNG DANH SÁCH -->
+    <div class="bg-white rounded shadow overflow-x-auto">
+        <table class="w-full text-left">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="px-4 py-3">STT</th>
+                    <th class="px-4 py-3">Email</th>
+                    <th class="px-4 py-3">Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="contactTable"></tbody>
+        </table>
+    </div>
+
+    <script src="/js/admin-contacts.js"></script>
+</body>
+
+</html>
