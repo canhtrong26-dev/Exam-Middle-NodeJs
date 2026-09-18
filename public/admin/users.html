@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Users</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-2xl font-bold mb-6">Quản lý Users</h1>
+
+    <!-- FORM THÊM / SỬA -->
+    <div class="bg-white p-6 rounded shadow mb-6">
+        <h2 class="text-lg font-semibold mb-4" id="formTitle">Thêm User</h2>
+        <input type="hidden" id="userId" />
+        <div class="flex flex-col gap-3">
+            <input id="inputFullName" type="text" placeholder="Full Name" class="border px-4 py-2 rounded" />
+            <input id="inputPhone" type="text" placeholder="Phone" class="border px-4 py-2 rounded" />
+            <select id="inputStatus" class="border px-4 py-2 rounded">
+        <option value="Level 0">Level 0</option>
+        <option value="Level 1">Level 1</option>
+        <option value="Level 2">Level 2</option>
+        <option value="Level 3">Level 3</option>
+      </select>
+            <div class="flex gap-3">
+                <button onclick="saveUser()" class="bg-blue-500 text-white px-6 py-2 rounded">Lưu</button>
+                <button onclick="resetForm()" class="bg-gray-400 text-white px-6 py-2 rounded">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BẢNG DANH SÁCH -->
+    <div class="bg-white rounded shadow overflow-x-auto">
+        <table class="w-full text-left">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="px-4 py-3">STT</th>
+                    <th class="px-4 py-3">Full Name</th>
+                    <th class="px-4 py-3">Phone</th>
+                    <th class="px-4 py-3">Status</th>
+                    <th class="px-4 py-3">Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+
+    <script src="/js/admin-users.js"></script>
+</body>
+
+</html>

@@ -31,6 +31,13 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use("/api/users", userRoute);
 app.use("/api/contacts", contactRoute);
 
+app.get("/admin/users", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/admin/users.html"));
+});
+
+app.get("/admin/contacts", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/admin/contacts.html"));
+});
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
