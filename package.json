@@ -1,0 +1,22 @@
+{
+    "name": "18.9.2026",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/app.js",
+        "tw": "tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "express": "^5.2.1",
+        "mongoose": "^9.10.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14",
+        "tailwindcss": "^3.4.19"
+    }
+}
